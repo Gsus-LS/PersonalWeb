@@ -11,7 +11,8 @@
   <div id="header">
 <div class="container">
     <nav>
-        <img src="images/logo.png" class="logo">
+        <p></p>
+        <!--<img src="images/logo.png" class="logo"> CHANGE NAME FOR LOGO-->
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -21,23 +22,79 @@
         </ul>
     </nav>
     <div class="header-text">
-        <p>UI/Designer</Designer></p>
-        <h1>Hi, I'm <br><span>Jesús Lozano</span>,<br> computer Student!</h1>
+        <p>Web Developer</p>
+        <h1>Hi, I'm <br><span>Jesús Lozano</span>,<br> computer student!</h1>
     </div>
 </div>
-  </div>  
+  </div> 
+  <!-- ABOUT SECTION--> 
   <div class="about">
   <div class="container">
     <div class="row">
         <div class="about-col-1">
-            <img src="images/user.png" alt="">
+            <img src="images/user.png">
         </div>
-        <div class="about col-2"></div>
+        <div class="about col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.wegtrehytrshj6ytejrt6suhaeyte 
+                Molestias eiuempora!</p>
+        
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                    <li><span>Web Development</span><br>Web App Deveploment</li>
+                    <li><span>App Development</span><br>Building Android/iOS apps</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>JavaScript</span><br>Algorithms and Data Structures</li>
+                    <li><span>GitHub</span><br>GitHub and Git</li>
+                    <li><span>APIs</span><br>Implementing and manipulating APIs</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>JavaScript</span><br>Algorithms and Data Structures</li>
+                    <li><span>GitHub</span><br>GitHub and Git</li>
+                    <li><span>APIs</span><br>Implementing and manipulating APIs</li>
+                </ul>
+            </div>
+        </div>
     </div>
   </div>
 </div>
+<!--SERVICES-->
+<div id="services">
+    <div class="container">
+        <h1 class=""></h1>
+    </div>
+
+</div>
 
 
+<script>
+
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+       for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+       }
+       for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+       }
+       event.currentTarget.classList.add("active-link"); 
+       document.getElementById(tabname).classList.add("active-tab"); 
+    }
+
+</script>
 
 
 </body>
